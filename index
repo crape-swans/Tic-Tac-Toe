@@ -1,0 +1,28 @@
+Module GradeCalculator
+
+    ' Constants for weightage of each component
+    Const ASSIGNMENT_WEIGHT As Double = 0.3
+    Const QUIZ_WEIGHT As Double = 0.2
+    Const EXAM_WEIGHT As Double = 0.5
+
+    Sub Main()
+        ' Get user input for scores
+        Console.Write("Enter your assignment score (out of 100): ")
+        Dim assignmentScore As Double = Convert.ToDouble(Console.ReadLine())
+
+        Console.Write("Enter your quiz score (out of 100): ")
+        Dim quizScore As Double = Convert.ToDouble(Console.ReadLine())
+
+        Console.Write("Enter your exam score (out of 100): ")
+        Dim examScore As Double = Convert.ToDouble(Console.ReadLine())
+
+        ' Calculate overall grade
+        Dim overallGrade As Double = (assignmentScore * ASSIGNMENT_WEIGHT) +
+                                     (quizScore * QUIZ_WEIGHT) +
+                                     (examScore * EXAM_WEIGHT)
+
+        ' Display the overall grade
+        Console.WriteLine(vbCrLf & "Your overall grade is: " & overallGrade)
+    End Sub
+
+End Module
